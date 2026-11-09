@@ -1,0 +1,8 @@
+# Real configuration (contains secrets) — commit only the *.example.php templates
+/config.php
+/config.local.php
+
+# Runtime data (SQLite database, locks)
+/data/*.sqlite
+/data/*.sqlite-*
+/data/*.lock

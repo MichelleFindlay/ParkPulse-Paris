@@ -1,0 +1,25 @@
+{
+    "name": "parkpulse/park-pulse",
+    "description": "Live waits, shows and hours for Disneyland Paris — single-site PHP app.",
+    "version": "1.0.0",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "ext-pdo_sqlite": "*",
+        "ext-json": "*"
+    },
+    "suggest": {
+        "ext-curl": "Parallel upstream requests (falls back to streams without it)",
+        "ext-mbstring": "Better name matching between APIs"
+    },
+    "autoload": {
+        "psr-4": {
+            "ParkPulse\\": "src/"
+        }
+    },
+    "scripts": {
+        "serve": "php -S localhost:8000 -t public public/index.php",
+        "lint": "find src public config.php -name '*.php' -print0 | xargs -0 -n1 php -l"
+    }
+}
